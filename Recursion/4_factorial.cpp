@@ -8,6 +8,16 @@ int fact(int n){
     return n*fact(n-1);
 }
 
+void fact2(int n, int fac){
+    if(n == 1){
+        cout<<fac;
+        return;
+    } 
+    fact2(n-1,fac*n);
+}
+
 int main(){
-    cout<<"Factorial: "<<fact(3);
+    cout<<"Factorial by functional method: "<<fact(3)<<endl;
+    cout<<"Factorial by parametrise factorial method: ";
+    fact2(3,1);
 }
